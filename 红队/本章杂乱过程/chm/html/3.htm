@@ -1,0 +1,115 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Step 1 - LAN networks configuration</TITLE>
+<style type="text/css">
+<!--
+body, table, tr, td, th, dd, dl, dt, p{font-family:arial,san-serif; font-size: 9pt}
+h1 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 14pt; font-weight: bold}
+h2 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 12pt; font-weight: bold}
+h3 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 10pt; font-weight: bold}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFCC" text="#000000" link="#3333FF" vlink="#0000FF" alink="#3333FF">
+<h2>Step 1 - LAN networks configuration</h2>
+<p>Normally, the clients and server are connected with A Hub, Wireless Hub, Switch 
+  or Router. The network protocol between the server and clients is TCP/IP. Therefore 
+  both the server and the clients have an IP address. The server IP address is 
+  static and fixed. The clients IP address can be fixed or dynamic which is obtained 
+  through DHCP. CCProxy only requires that the clients can ping through the server 
+  IP address. We know that the server may have multiple IP addresses, but must 
+  have one that is used to connect with other LAN clients. The IP address that 
+  is used to connect with the other LAN client is called the proxy server address, 
+  We generally assumed this to be 192.168.0.1.</p>
+<p>If the clients and server have not yet been setup to have a connection, we 
+  recommend allocate IP addresses like this at below:</p>
+<table width="400" border="0" cellspacing="1" cellpadding="5" bgcolor="#E1E7CD" align="center">
+  <tr bgcolor="white"> 
+    <td>&nbsp;</td>
+    <td>IP address</td>
+    <td>mask</td>
+    <td>gateway</td>
+    <td>DNS</td>
+  </tr>
+  <tr bgcolor="white"> 
+    <td>Server</td>
+    <td>192.168.0.1</td>
+    <td>255.255.255.0</td>
+    <td>empty</td>
+    <td>empty</td>
+  </tr>
+  <tr bgcolor="white"> 
+    <td>Client1</td>
+    <td>192.168.0.2</td>
+    <td>255.255.255.0</td>
+    <td>192.168.0.1</td>
+    <td>192.168.0.1</td>
+  </tr>
+  <tr bgcolor="white"> 
+    <td>Client2</td>
+    <td>192.168.0.3</td>
+    <td>255.255.255.0</td>
+    <td>192.168.0.1</td>
+    <td>192.168.0.1</td>
+  </tr>
+  <tr bgcolor="white"> 
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+    <td>...</td>
+  </tr>
+  <tr bgcolor="white"> 
+    <td>Client99</td>
+    <td>192.168.0.100</td>
+    <td>255.255.255.0</td>
+    <td>192.168.0.1</td>
+    <td>192.168.0.1</td>
+  </tr>
+</table>
+<p>How to detect whether ping Requests are transferring through between the clients 
+  and server? At the client, in the &quot;start&quot; menu -&gt; &quot;run&quot; 
+  -&gt; &quot;cmd&quot;, assuming that the server IP is 192.168.0.1, in the command 
+  line, to type &quot;ping 192.168.0.1&quot; then press return. If the result 
+  is similar to that at below, it means the client is connected to the server 
+  successfully. </p>
+<table width="400" border="0" cellspacing="0" cellpadding="10" align="center" style="BORDER-RIGHT: #E1E7CD 1px solid; BORDER-TOP: #E1E7CD 1px solid; BORDER-LEFT: #E1E7CD 1px solid; BORDER-BOTTOM: #E1E7CD 1px solid">
+  <tr> 
+    <td bgcolor="white" > 
+      <p>Pinging 192.168.0.1 with 32 bytes of data:</p>
+      <p>Reply from 192.168.0.1: bytes=32 time=2ms TTL=150<br>
+        Reply from 192.168.0.1: bytes=32 time=2ms TTL=150<br>
+        Reply from 192.168.0.1: bytes=32 time=7ms TTL=150<br>
+        Reply from 192.168.0.1: bytes=32 time=7ms TTL=150</p>
+      <p>Ping statistics for 192.168.0.1:<br>
+        Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),<br>
+        Approximate round trip times in milli-seconds:<br>
+        Minimum = 2ms, Maximum = 7ms, Average = 4ms </p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>If the result is like that at below, it means the client cannot connect to 
+  the server. </p>
+<table width="400" border="0" cellspacing="0" cellpadding="10" align="center" style="BORDER-RIGHT: #E1E7CD 1px solid; BORDER-TOP: #E1E7CD 1px solid; BORDER-LEFT: #E1E7CD 1px solid; BORDER-BOTTOM: #E1E7CD 1px solid">
+  <tr> 
+    <td bgcolor="white"> 
+      <p>Pinging 192.168.0.1 with 32 bytes of data:</p>
+      <p>Request timed out.<br>
+        Request timed out.<br>
+        Request timed out.<br>
+        Request timed out.</p>
+      <p>Ping statistics for 192.168.0.1:<br>
+        Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),</p>
+    </td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p> </p>
+<p>If the client cannot connect to the server, you need to check the IP address 
+  settings and the connections to the Hub, Switch or Router on the clients and 
+  server.</p>
+</body>
+</html>

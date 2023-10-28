@@ -1,0 +1,78 @@
+正在检查域 DC=god,DC=org
+CN=OWA2010CN-GOD,OU=Domain Controllers,DC=god,DC=org
+	exchangeRFR/OWA2010CN-GOD
+	exchangeRFR/OWA2010CN-God.god.org
+	exchangeMDB/OWA2010CN-God.god.org
+	exchangeMDB/OWA2010CN-GOD
+	exchangeAB/OWA2010CN-GOD
+	exchangeAB/OWA2010CN-God.god.org
+	SMTP/OWA2010CN-GOD
+	SMTP/OWA2010CN-God.god.org
+	SmtpSvc/OWA2010CN-GOD
+	SmtpSvc/OWA2010CN-God.god.org
+	ldap/OWA2010CN-God.god.org/ForestDnsZones.god.org
+	ldap/OWA2010CN-God.god.org/DomainDnsZones.god.org
+	TERMSRV/OWA2010CN-GOD
+	TERMSRV/OWA2010CN-God.god.org
+	NtFrs-88f5d2bd-b646-11d2-a6d3-00c04fc9b232/OWA2010CN-God.god.org
+	Dfsr-12F9A27C-BF97-4787-9364-D31B6C55EB04/OWA2010CN-God.god.org
+	DNS/OWA2010CN-God.god.org
+	GC/OWA2010CN-God.god.org/god.org
+	RestrictedKrbHost/OWA2010CN-God.god.org
+	RestrictedKrbHost/OWA2010CN-GOD
+	HOST/OWA2010CN-GOD/GOD
+	HOST/OWA2010CN-God.god.org/GOD
+	HOST/OWA2010CN-GOD
+	HOST/OWA2010CN-God.god.org
+	HOST/OWA2010CN-God.god.org/god.org
+	E3514235-4B06-11D1-AB04-00C04FC2DCD2/dbfc2e86-abce-4ff6-8c71-4e25a20fa38e/god.org
+	ldap/OWA2010CN-GOD/GOD
+	ldap/dbfc2e86-abce-4ff6-8c71-4e25a20fa38e._msdcs.god.org
+	ldap/OWA2010CN-God.god.org/GOD
+	ldap/OWA2010CN-GOD
+	ldap/OWA2010CN-God.god.org
+	ldap/OWA2010CN-God.god.org/god.org
+CN=krbtgt,CN=Users,DC=god,DC=org
+	kadmin/changepw
+CN=webadmin,CN=Users,DC=god,DC=org
+	priv/test
+CN=MARY-PC,CN=Computers,DC=god,DC=org
+	MSSQLSvc/mary-PC.god.org:1433
+	MSSQLSvc/mary-PC.god.org
+	RestrictedKrbHost/MARY-PC
+	HOST/MARY-PC
+	RestrictedKrbHost/MARY-PC.god.org
+	HOST/MARY-PC.god.org
+CN=JACK-PC,CN=Computers,DC=god,DC=org
+	RestrictedKrbHost/JACK-PC
+	HOST/JACK-PC
+	RestrictedKrbHost/Jack-PC.god.org
+	HOST/Jack-PC.god.org
+CN=WEBSERVER,CN=Computers,DC=god,DC=org
+	MSSQLSvc/WebServer.god.org:1433
+	MSSQLSvc/WebServer.god.org
+	WSMAN/WebServer
+	WSMAN/WebServer.god.org
+	TERMSRV/WEBSERVER
+	TERMSRV/WebServer.god.org
+	RestrictedKrbHost/WEBSERVER
+	HOST/WEBSERVER
+	RestrictedKrbHost/WEBSERVER.god.org
+	HOST/WEBSERVER.god.org
+CN=FILESERV,CN=Computers,DC=god,DC=org
+	MSSQLSvc/fileserv.god.org:1433
+	HOST/FILESERV
+	HOST/fileserv.god.org
+CN=SQLSERVER,CN=Computers,DC=god,DC=org
+	TERMSRV/SQLSERVER
+	TERMSRV/SqlServer.god.org
+	MSSQLSvc/SqlServer.god.org:1433
+	MSSQLSvc/SqlServer.god.org
+	WSMAN/SqlServer
+	WSMAN/SqlServer.god.org
+	RestrictedKrbHost/SQLSERVER
+	HOST/SQLSERVER
+	RestrictedKrbHost/SqlServer.god.org
+	HOST/SqlServer.god.org
+
+发现存在 SPN!

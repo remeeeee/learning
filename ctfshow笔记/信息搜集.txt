@@ -1,0 +1,43 @@
+前端禁用F12禁用鼠标右键   上burp
+
+index.phps 为网站备份文件 后缀名phps
+
+www.zip 备份
+
+.git .svn 泄露
+
+
+题目提示：发现网页有个错别字？赶紧在生产环境vim改下，不好，死机了
+由题目中的提示可以知道，vim修改的文件并没有保存后关闭而是直接关闭
+所以第一次会产生一个.<文件名>.php.swp文件，第二次会有一个.<文件名>.php.swo文件，第三次会有一个.<文件名>.php.swn文件
+
+
+网站页面信息可能藏有用户名与密码    robots.txt
+
+技术文档泄露         .md      document
+
+网站源代码泄露信息
+泄露了编辑器相关漏洞，利用编辑器查看服务器文件目录
+
+
+泄露邮箱，找到qq号，收集这个人的相关信息，与后台账号密码有关的
+
+url后面带斜杠与不带斜杠的区别
+
+
+例如：https://www.baidu.com/test/与https://www.baidu.com/test
+当Web服务器接收到对某个末尾不含斜杠的url请求时，例如https://www.baidu.com/test，这时服务器会搜索网站根目录下有没有名为“test”的文件，如果没有就把test当做目录处理，然后返回test目录下的默认首页。
+当Web服务器接收到的是末尾带斜杠的请求时就会直接当做目录处理。
+
+
+考察PHP探针php探针是用来探测空间、服务器运行状况和PHP信息用的，探针可以实时查看服务器硬盘资源、内存占用、网卡 流量、系统负载、服务器时间等信息。 url后缀名添加/tz.php 版本是雅黑PHP探针，然后查看phpinfo搜索flag
+
+
+sql备份文件，backup.sql
+
+js文件中提取信息
+
+不要被前端吓到，前端的验证均可绕过，burp、hackbar上场。
+
+mdb文件是早期asp+access构架的数据库文件，文件泄露相当于数据库被脱裤了。
+mdb文件是早期asp+access构架的数据库文件 直接查看url路径添加/db/db.mdb 下载文件通过txt打开或者通过EasyAccess.exe打开搜索flag flag{ctfshow_old_database}

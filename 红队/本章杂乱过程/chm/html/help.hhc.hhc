@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<OBJECT type="text/site properties">
+	<param name="Auto Generated" value="Yes">
+</OBJECT>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="Main Features">
+		<param name="Local" value="1.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="Installation">
+		<param name="Local" value="2.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Step 1 - LAN networks configuration">
+			<param name="Local" value="3.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Step 2 - Internet connection">
+			<param name="Local" value="4.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Step 3 - Install CCProxy software at server">
+			<param name="Local" value="5.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Step 4 - Configure IE browser proxy settings at clients">
+			<param name="Local" value="6.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="Client Proxy Configuration">
+		<param name="Local" value="7.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="IE (Internet Explorer)">
+			<param name="Local" value="8.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Firefox">
+			<param name="Local" value="9.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Outlook Express for free mail">
+			<param name="Local" value="10.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Outlook Express for company mail">
+			<param name="Local" value="11.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Outlook Express for Gmail">
+			<param name="Local" value="12.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Office Outlook">
+			<param name="Local" value="13.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Outlook Express for News (NNTP)">
+			<param name="Local" value="14.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="CuteFTP">
+			<param name="Local" value="15.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="CuteFtp Pro">
+			<param name="Local" value="16.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="ICQ">
+			<param name="Local" value="17.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="MSN Messenger">
+			<param name="Local" value="18.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Voice/video chat software">
+			<param name="Local" value="19.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="NetMeeting">
+			<param name="Local" value="20.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Real Player">
+			<param name="Local" value="21.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Windows Media Player">
+			<param name="Local" value="22.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="NetTerm for BBS telnet">
+			<param name="Local" value="23.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Java application for Game/Chat room">
+			<param name="Local" value="24.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Norton AntiVirus for live update">
+			<param name="Local" value="25.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="AVG update">
+			<param name="Local" value="26.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Windows XP update">
+			<param name="Local" value="27.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Other software">
+			<param name="Local" value="28.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="Account Management">
+		<param name="Local" value="29.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Account Manager">
+			<param name="Local" value="30.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Create New Account">
+			<param name="Local" value="31.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Web Filter">
+			<param name="Local" value="32.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Time Schedule">
+			<param name="Local" value="33.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="Main interface">
+		<param name="Local" value="34.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Toolbar Zone">
+			<param name="Local" value="35.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Online Information Zone">
+			<param name="Local" value="36.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Product Logo Zone">
+			<param name="Local" value="37.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="System Information Zone">
+			<param name="Local" value="38.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="Options dialog box">
+		<param name="Local" value="39.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="Advanced Options">
+		<param name="Local" value="40.htm">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Dial-up Page">
+			<param name="Local" value="41.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Cache Page">
+			<param name="Local" value="42.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Cascading Page">
+			<param name="Local" value="43.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Log Page">
+			<param name="Local" value="44.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Mail Page">
+			<param name="Local" value="45.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Networks Page">
+			<param name="Local" value="46.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Others Page">
+			<param name="Local" value="47.htm">
+			</OBJECT>
+	</UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="CCProxy Online Monitor">
+		<param name="Local" value="48.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="Log Analysis">
+		<param name="Local" value="49.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="FAQs and Feedback">
+		<param name="Local" value="50.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="ImageNumber" value="1">
+		<param name="Name" value="Contact">
+		<param name="Local" value="51.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>

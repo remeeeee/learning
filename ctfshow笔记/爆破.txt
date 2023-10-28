@@ -1,0 +1,4 @@
+Authorization认证
+Authorization:Basic:base64加密的(admin:12334)
+
+身份证号中间的数为出生年月日，不需要随机爆破

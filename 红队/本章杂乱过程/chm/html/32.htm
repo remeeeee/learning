@@ -1,0 +1,53 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<TITLE>Web Filter</TITLE>
+<style type="text/css">
+<!--
+body, table, tr, td, th, dd, dl, dt, p{font-family:arial,san-serif; font-size: 9pt}
+h1 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 14pt; font-weight: bold}
+h2 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 12pt; font-weight: bold}
+h3 {  font-family: "Arial", "Helvetica", "sans-serif"; font-size: 10pt; font-weight: bold}
+-->
+</style>
+</head>
+
+<body bgcolor="#FFFFCC" text="#000000" link="#3333FF" vlink="#0000FF" alink="#3333FF">
+<h2>Web Filter</h2>
+<p>Web filter can effectively restrict clients access to particular web sites. 
+</p>
+<p>&quot;Account -&gt; Web Filter&quot;</p>
+<p><b>Web Filter</b> includes <b>Site Filter</b>, <b>URL Filter</b> and <b>Content 
+  Filter</b>.<br>
+  <b>Web Filter Name</b> is used to define different web filter rules.<br>
+  <b>Site Filter</b>: Input the sites you want to filter in the edit box. Site 
+  filter supports wildcard character (*,?). Multiple sites should be divided by 
+  semicolon. For example: </p>
+<p>*.yahoo.com;???.hotmail.com;www.*.org. </p>
+<p>Also you can define port filter. For example: </p>
+<p>*:433, *.yahoo.com:80;*.hotmail.com:*; </p>
+<p>You can also input a web filter file name here. The web filter file format 
+  is one web filter for one line. For example:</p>
+<p>*.yahoo.com;<br>
+  *.hotmail.com;<br>
+  *.bbc.com:*;<br>
+  *.msn.com:433;</p>
+<p><b>Permitted Sites</b>: clients can only access sites which are included in 
+  the site filters.<br>
+  <b>Forbidden Sites</b>: clients can not access sites which are included in the 
+  site filters.<br>
+  <b>Forbidden URL</b>: You can define the URL filter here. You can input whole 
+  or partial URLs. For example:</p>
+<p>http://www.google.com/;*.zip;*.exe;*/mail/; </p>
+<p>Forbidden URL is different from Site Filter. Site Filter only applies to the 
+  web host name and port, whereas Forbidden URL applies to the whole URL address.</p>
+<p><b>Content Prohibited</b> can filter web pages with specific characters. If 
+  the web page includes such characters, it will be banned. Input the characters 
+  you want to name in the edit box. Multiple characters should be divided by semicolon. 
+  For example: chat;travel. </p>
+<p><font color="red">Note</font>: This step is only to define a web filter rule. 
+  If you want to apply it to a specific account, you should edit the account's 
+  property and select the web filter rule for this account.<br>
+</p>
+</body>
+</html>
